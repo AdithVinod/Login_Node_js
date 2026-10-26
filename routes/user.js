@@ -1,10 +1,12 @@
+
 const express = require('express');
+const dotenv = require('dotenv');
 const user= express.Router();
 
-const username = 'admin';
-const password = 'admin@123';
+dotenv.config();
 
-
+const username = process.env.USER_NAME;
+const password = process.env.PASSWORD;
 
 
 user.get('/', (req, res)=>{
